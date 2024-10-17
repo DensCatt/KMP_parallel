@@ -138,13 +138,17 @@ def main():
 
     if not os.path.exists(args2.DNA):
         errors.append(f"ERROR: DNA file '{args2.DNA}' not found")
-    elif not args2.DNA.endswith(".fasta"):
-        errors.append(f"ERROR: DNA file '{args2.DNA}' must be in FASTA format")
+    else:
+        with open(args2.DNA) as f:
+            if not f.readline().startswith(">"):
+                errors.append(f"ERROR: DNA file '{args2.DNA}' must be in FASTA format")
 
     if not os.path.exists(args2.patterns):
         errors.append(f"ERROR: Pattern file '{args2.patterns}' not found")
-    elif not args2.patterns.endswith(".fasta"):
-        errors.append(f"ERROR: DNA file '{args2.patterns}' must be in FASTA format")
+    else:
+        with open(args2.patterns) as f:
+            if not f.readline().startswith(">"):
+                errors.append(f"ERROR: DNA file '{args2.patterns}' must be in FASTA format")
 
     if errors:
         for error in errors:
