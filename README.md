@@ -14,6 +14,6 @@ Uses KMP to identify in parallel all matches of the short sequences
 within the longer genome sequence, and stores the matches, one per line, in a single file in 
 a .txt format
 
-Here is an example of usage: python .\KMP.py --DNA .\sequence1.fasta --patterns .\random1.fasta --output .\output.txt
+Here is an example of usage: python .\KMP.py --DNA .\genome.fasta --patterns .\100_random.fasta --output .\output.txt
 
 For further information: python .\KMP.py --help 
