@@ -17,7 +17,9 @@ a .txt format
 Default parameter:
 1) num_cores = 4
 2) output file name = patterns_matches.txt
-Here is an example of usage: python .\KMP.py --DNA .\genome.fasta --patterns .\100_random.fasta
+
+
+Here is an example of usage: python .\KMP.py --DNA .\test_files\genome.fasta --patterns .\test_files\100_random.fasta
 
 
 For further information: python .\KMP.py --help 
